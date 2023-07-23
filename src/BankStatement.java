@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BankStatement {
     void bankStatementFun(int accNo) throws IOException {
-        File file = new File("acc_"+accNo+".txt");
+        File file = new File("db/Bank Statement/acc_"+accNo+".txt");
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);

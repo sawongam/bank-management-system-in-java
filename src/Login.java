@@ -13,7 +13,7 @@ public class Login {
     }
 
      void loginAuth(int accNo, String pass) throws IOException {
-        File file = new File("credentials.txt");
+        File file = new File("db/credentials.txt");
         Scanner scanner = new Scanner(file);
         boolean loginBoo = false;
         boolean incPass = false;

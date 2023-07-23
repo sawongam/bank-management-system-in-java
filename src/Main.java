@@ -44,31 +44,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         switch (choice) {
-            case 1:
-                balInquiry(accNo);
-                break;
-            case 2:
-                accDetails(accNo);
-                break;
-            case 3:
-                fundTransfer(accNo);
-                break;
-            case 4:
-                tranHistory(accNo);
-                break;
-            case 5:
-                accClose(accNo);
-                break;
-            case 6:
+            case 1 -> balInquiry(accNo);
+            case 2 -> accDetails(accNo);
+            case 3 -> fundTransfer(accNo);
+            case 4 -> tranHistory(accNo);
+            case 5 -> accClose(accNo);
+            case 6 -> {
                 System.out.println("Logged out successfully!");
                 System.out.println("\nWelcome to SawOnGam Bank Ltd.");
                 intro();
-                break;
-            case 7:
-                System.exit(0);
-            default:
+            }
+            case 7 -> System.exit(0);
+            default -> {
                 System.out.println("Incorrect! Choose a valid option again.\n");
                 menu(accNo);
+            }
         }
 
     }
@@ -95,12 +85,11 @@ public class Main {
 
     private static void accClose(int accNo) throws IOException {
         Deletion accCloseFun = new Deletion();
-        accCloseFun.accCloseFun(accNo,"credentials.txt");
-        accCloseFun.delLine(accNo,"userDB.txt");
-        accCloseFun.delLine(accNo,"balanceDB.txt");
+        accCloseFun.accCloseFun(accNo,"db/credentials.txt");
+        accCloseFun.delLine(accNo,"db/userDB.txt");
+        accCloseFun.delLine(accNo,"db/balanceDB.txt");
         System.out.println("\nAccount successfully Deleted.");
     }
 
 
 }
-

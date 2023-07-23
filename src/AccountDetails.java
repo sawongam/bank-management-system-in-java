@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AccountDetails {
     void accountDetailsFun(int accNo) throws IOException {
-        File file = new File("userDB.txt");
+        File file = new File("db/userDB.txt");
         Scanner scanner = new Scanner(file);
         String wholeDetail = "";
         while (scanner.hasNextLine()) {

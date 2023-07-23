@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BalanceInquiry {
     void balanceInquiryFun(int accNo) throws IOException {
-        File file = new File("balanceDB.txt");
+        File file = new File("db/balanceDB.txt");
         Scanner scanner = new Scanner(file);
         int accBalance = -1;
         while (scanner.hasNextLine()) {

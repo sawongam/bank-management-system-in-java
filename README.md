@@ -1,7 +1,7 @@
 # Bank Managment System in Java
 ![Java](https://img.shields.io/badge/Language-Java-red.svg) 
 ![Status](https://img.shields.io/badge/Status-In%20Progress-orange.svg)
-![Version](https://img.shields.io/badge/Version-1.0-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.2.1-blue.svg)
 
 A basic banking system, providing account login, creation, balance inquiry, fund transfers, and more. 
 

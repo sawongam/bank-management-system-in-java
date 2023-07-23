@@ -39,7 +39,7 @@ public class Transaction {
     }
 
     boolean rAccCheck(int rAccNo) throws FileNotFoundException {
-        File file = new File("balanceDB.txt");
+        File file = new File("db/balanceDB.txt");
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
@@ -51,7 +51,7 @@ public class Transaction {
     }
 
     boolean sAccBalCheck(int accNo, int tAmount) throws FileNotFoundException {
-        File file = new File("balanceDB.txt");
+        File file = new File("db/balanceDB.txt");
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
@@ -66,7 +66,7 @@ public class Transaction {
     }
 
     void transaction(int accNo, int rAccNo, int tAmount) throws IOException {
-        File file = new File("balanceDB.txt");
+        File file = new File("db/balanceDB.txt");
         Scanner scanner = new Scanner(file);
         String newInfo = "";
         while (scanner.hasNextLine()) {
@@ -82,7 +82,7 @@ public class Transaction {
             String newLine = a + " " + b;
             newInfo += newLine + "\n";
         }
-        Writer writer = new FileWriter("balanceDB.txt");
+        Writer writer = new FileWriter("db/balanceDB.txt");
         writer.write(newInfo);
         writer.close();
     }
@@ -99,7 +99,7 @@ public class Transaction {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String time = formatter.format(now);
-        Writer writer = new FileWriter("acc_"+accNo+".txt", true);
+        Writer writer = new FileWriter("db/Bank Statement/acc_"+accNo+".txt", true);
         writer.write(description + " " + type + " " + tAmount + " " + tRemarks + " " + date + " " + time + "\n");
         writer.close();
     }
@@ -111,7 +111,7 @@ public class Transaction {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String time = formatter.format(now);
-        Writer writer = new FileWriter("acc_"+rAccNo+".txt",true);
+        Writer writer = new FileWriter("db/Bank Statement/acc_"+rAccNo+".txt",true);
         writer.write(description + " " + type + " " + tAmount + " " + tRemarks + " " + date + " " + time + "\n");
         writer.close();
     }

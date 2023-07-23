@@ -55,7 +55,7 @@ public class Creation {
     int accNoCreation() throws IOException {
         String lastLine = "";
         int accNo;
-        File file = new File("credentials.txt");
+        File file = new File("db/credentials.txt");
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
             lastLine = scanner.nextLine();
@@ -71,20 +71,20 @@ public class Creation {
     }
 
     void credWrite(int accNo, String[] accLineInfo) throws IOException {
-        FileWriter writer = new FileWriter("credentials.txt", true);
+        FileWriter writer = new FileWriter("db/credentials.txt", true);
         writer.write("\n" + accNo + " " + accLineInfo[8]);
         writer.close();
     }
 
     void balWrite(int accNo) throws IOException {
         int initialBal = 69;
-        FileWriter writer = new FileWriter("balanceDB.txt", true);
+        FileWriter writer = new FileWriter("db/balanceDB.txt", true);
         writer.write("\n" + accNo + " " + initialBal);
         writer.close();
     }
 
     void userWrite(int accNo, String[] accLineInfo) throws IOException {
-        FileWriter writer = new FileWriter("userDB.txt", true);
+        FileWriter writer = new FileWriter("db/userDB.txt", true);
         writer.write("\n" + accNo + " ");
         for (int i = 0; i < 8; i++) {
             writer.write(accLineInfo[i] + " ");
