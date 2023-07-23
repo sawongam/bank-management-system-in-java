@@ -1,4 +1,6 @@
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Transaction {
@@ -22,6 +24,7 @@ public class Transaction {
             if (sAccBalCheck(accNo, tAmount)) {
                 //sBalance ok
                 transaction(accNo, rAccNo, tAmount);  //actual transaction
+                writeTransaction(accNo, rAccNo, tAmount, tRemarks); //write transaction to file
                 System.out.println("Transaction Successful!");
                 System.out.println("Press any key to continue...");
                 Scanner tscanner = new Scanner(System.in);
@@ -81,6 +84,35 @@ public class Transaction {
         }
         Writer writer = new FileWriter("balanceDB.txt");
         writer.write(newInfo);
+        writer.close();
+    }
+
+    void writeTransaction(int accNo, int rAccNo, int tAmount, String tRemarks) throws IOException {
+        debitWrite(accNo, rAccNo, tAmount, tRemarks);
+        creditWrite(accNo, rAccNo, tAmount, tRemarks);
+    }
+
+    void debitWrite(int accNo, int rAccNo, int tAmount, String tRemarks) throws IOException {
+        String description = ("Transfer to " + rAccNo);
+        String type = "Debit";
+        String date = java.time.LocalDate.now().toString();
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String time = formatter.format(now);
+        Writer writer = new FileWriter("acc_"+accNo+".txt", true);
+        writer.write(description + " " + type + " " + tAmount + " " + tRemarks + " " + date + " " + time + "\n");
+        writer.close();
+    }
+
+    void creditWrite(int accNo, int rAccNo, int tAmount, String tRemarks) throws IOException {
+        String description = ("Transfer from " + accNo);
+        String type = "Credit";
+        String date = java.time.LocalDate.now().toString();
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String time = formatter.format(now);
+        Writer writer = new FileWriter("acc_"+rAccNo+".txt",true);
+        writer.write(description + " " + type + " " + tAmount + " " + tRemarks + " " + date + " " + time + "\n");
         writer.close();
     }
 

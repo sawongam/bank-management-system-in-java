@@ -36,7 +36,7 @@ public class Main {
         System.out.println("Type 1: Balance Inquiry");
         System.out.println("Type 2: Account Details");
         System.out.println("Type 3: Fund transfer");
-        System.out.println("Type 4: Transaction History");
+        System.out.println("Type 4: Bank Statement");
         System.out.println("Type 5: Account Closure");
         System.out.println("Type 6: Log out");
         System.out.println("Type 7: Exit");
@@ -88,8 +88,9 @@ public class Main {
         transactionFun.transactionFun(accNo);
     }
 
-    private static void tranHistory(int accNo) {
-        //TODO
+    private static void tranHistory(int accNo) throws IOException {
+        BankStatement bankStatementFun = new BankStatement();
+        bankStatementFun.bankStatementFun(accNo);
     }
 
     private static void accClose(int accNo) throws IOException {
