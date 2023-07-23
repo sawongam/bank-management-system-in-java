@@ -38,6 +38,13 @@ public class Deletion {
             newInfo += newLine.trim() + "\n";
 
         }
+
+        // Check if the last line is blank
+        if (newInfo.endsWith("\n")) {
+            // Remove the newline character
+            newInfo = newInfo.substring(0, newInfo.length() - 1);
+        }
+
         FileWriter writer = new FileWriter(fileName);
         writer.write(newInfo);
         writer.close();

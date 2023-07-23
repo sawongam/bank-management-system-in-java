@@ -38,7 +38,8 @@ public class Main {
         System.out.println("Type 3: Fund transfer");
         System.out.println("Type 4: Transaction History");
         System.out.println("Type 5: Account Closure");
-        System.out.println("Type 6: Exit");
+        System.out.println("Type 6: Log out");
+        System.out.println("Type 7: Exit");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -57,7 +58,13 @@ public class Main {
                 break;
             case 5:
                 accClose(accNo);
+                break;
             case 6:
+                System.out.println("Logged out successfully!");
+                System.out.println("\nWelcome to SawOnGam Bank Ltd.");
+                intro();
+                break;
+            case 7:
                 System.exit(0);
             default:
                 System.out.println("Incorrect! Choose a valid option again.\n");

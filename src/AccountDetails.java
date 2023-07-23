@@ -16,10 +16,12 @@ public class AccountDetails {
             }
         }
         String[] detail = wholeDetail.split(" ");
+        System.out.println("Account Details: ");
         System.out.println("Full Name: "+ detail[1] + " " + detail[2]);
-        System.out.println("Date of Birth: "+ detail[3]);
+        System.out.println("Account Number: "+ detail[0]);
         System.out.println("Gender: "+ detail[4]);
         System.out.println("Address: "+ detail[5]);
+        System.out.println("Date of Birth: "+ detail[3]);
         System.out.println("Phone number: "+ detail[6]);
         System.out.println("Email: "+ detail[7]);
         System.out.println("Identification: "+ detail[8]);
