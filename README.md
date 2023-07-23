@@ -1,7 +1,7 @@
 # Bank Managment System in Java
 ![Java](https://img.shields.io/badge/Language-Java-red.svg) 
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange.svg)
-![Version](https://img.shields.io/badge/Version-1.2.1-blue.svg)
+![Status](https://img.shields.io/badge/Status-Complete-orange.svg)
+![Version](https://img.shields.io/badge/Version-2.0-blue.svg)
 
 A basic banking system, providing account login, creation, balance inquiry, fund transfers, and more. 
 
@@ -45,6 +45,7 @@ The project utilizes several files to store and manage data:
 - credentials.txt: This file stores the username and password information of all registered users.
 - userDB.txt: This file holds the account details of all registered users, such as their account number, name, and contact information.
 - balanceDB.txt: This file maintains the account balance for all users.
+- acc_[accNo].txt: This file maintains the transaction of each account.
 
 ## Contribution
 

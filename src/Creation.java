@@ -47,7 +47,7 @@ public class Creation {
         accLineInfo[6] = scanner.nextLine();
         System.out.println("Enter your Citizenship Number: ");
         accLineInfo[7] = scanner.nextLine();
-        System.out.println("Enter your Account Password: ");
+        System.out.println("Create a Password for your Account: ");
         accLineInfo[8] = scanner.nextLine();
         return accLineInfo;
         }

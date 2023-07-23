@@ -4,14 +4,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Welcome to SawOnGam Bank Ltd.");
         intro();
     }
 
     private static void intro() throws IOException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Type 1: Login");
-        System.out.println("Type 2: Create Account");
+        System.out.println("┌───────────────────────────────┐");
+        System.out.println("│ Welcome to SawOnGam Bank Ltd. │");
+        System.out.println("├───────────────────────────────┤");
+        System.out.println("│ Type 1: Login                 │");
+        System.out.println("│ Type 2: Create Account        │");
+        System.out.println("└───────────────────────────────┘");
         int choiceAcc = scanner.nextInt();
         if (choiceAcc == 1) loginAcc();
         else if (choiceAcc == 2) createAcc();
@@ -32,15 +35,17 @@ public class Main {
     }
 
     static void menu(int accNo) throws IOException {
-        System.out.println("Menu: ");
-        System.out.println("Type 1: Balance Inquiry");
-        System.out.println("Type 2: Account Details");
-        System.out.println("Type 3: Fund transfer");
-        System.out.println("Type 4: Bank Statement");
-        System.out.println("Type 5: Account Closure");
-        System.out.println("Type 6: Log out");
-        System.out.println("Type 7: Exit");
-
+        System.out.println("┌────────────────────────────┐");
+        System.out.println("│           Menu:            │");
+        System.out.println("│                            │");
+        System.out.println("│ Type 1: Balance Inquiry    │");
+        System.out.println("│ Type 2: Account Details    │");
+        System.out.println("│ Type 3: Fund Transfer      │");
+        System.out.println("│ Type 4: Bank Statement     │");
+        System.out.println("│ Type 5: Account Closure    │");
+        System.out.println("│ Type 6: Log out            │");
+        System.out.println("│ Type 7: Exit               │");
+        System.out.println("└────────────────────────────┘");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         switch (choice) {
@@ -51,7 +56,6 @@ public class Main {
             case 5 -> accClose(accNo);
             case 6 -> {
                 System.out.println("Logged out successfully!");
-                System.out.println("\nWelcome to SawOnGam Bank Ltd.");
                 intro();
             }
             case 7 -> System.exit(0);
@@ -89,6 +93,7 @@ public class Main {
         accCloseFun.delLine(accNo,"db/userDB.txt");
         accCloseFun.delLine(accNo,"db/balanceDB.txt");
         System.out.println("\nAccount successfully Deleted.");
+        System.exit(0);
     }
 
 

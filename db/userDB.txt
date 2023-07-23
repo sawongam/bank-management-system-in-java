@@ -1,6 +1,3 @@
-0 Sangam Adhikari 2001-03-03 Male Bindabashini 9819102869 pubsanadh@gmail.com 693420
-1 Sangam Adhikari 2001-03-03 Male Bindabashini 9819102869 pubsanadh@gmail.com 693420
-2 Sangam Adhikari 2001-03-03 Male Bindabashini 9819102869 pubsanadh@gmail.com 693420
-3 Sangam Adhikari 2001-03-03 Male Bindabashini 9819102869 pubsanadh@gmail.com 693420
-4 Testy testy 2001-12-23 Male Kotlin 123456789 info@momo.com 123 
-5 Momo man 1969-5-21 Other Momo house 12369696969 momo@momomomo.com 69
+1000000 Sangam Adhikari 1693-06-09 Male Nepal 9806933693 info@sangamadhikari.com 619
+1000001 Donald Dog 1969-06-09 Male USA 6933694200 donald@isgood.com 693
+1000002 Nolan Chris 1900-09-06 Male Interstellar 0000000000 tenet@memento.com 321

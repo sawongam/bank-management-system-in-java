@@ -9,9 +9,10 @@ public class BankStatement {
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
+            System.out.println("\n");
             System.out.println("                           | Bank Statement |");
             System.out.println("---------------------------------------------------------------------------");
-            System.out.printf("%-20s | %-6s | %-6s | %-7s | %-7s | %-8s%n", "Description", "Type", "Amount", "Remarks", "Date", "Time");
+            System.out.printf("%-21s | %-6s | %-6s | %-7s | %-10s | %-8s%n", "Description", "Type", "Amount", "Remarks", "Date", "Time");
             System.out.println("---------------------------------------------------------------------------");
             while (scanner.hasNextLine()) {
                 String trWLine = scanner.nextLine();
@@ -22,7 +23,7 @@ public class BankStatement {
                 String remarks = trLine[5];
                 String date = trLine[6];
                 String time = trLine[7];
-                System.out.printf("%-20s | %-6s | %-6s | %-7s | %-7s | %-8s%n", description, type, amount, remarks, date, time);
+                System.out.printf("%-21s | %-6s | %-6s | %-7s | %-10s | %-8s%n", description, type, amount, remarks, date, time);
             }
             System.out.println("---------------------------------------------------------------------------");
         } catch (FileNotFoundException e) {

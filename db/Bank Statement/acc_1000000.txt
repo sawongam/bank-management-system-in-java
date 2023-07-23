@@ -1,0 +1,4 @@
+Transfer to 1000001 Debit 36 suiii 2023-07-23 20:19:56
+Transfer to 1000002 Debit 16 time 2023-07-23 20:21:11
+Transfer from 1000001 Credit 36 doit 2023-07-23 20:22:55
+Transfer from 1000002 Credit 16 heimer 2023-07-23 20:23:36

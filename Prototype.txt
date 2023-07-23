@@ -1,9 +1,0 @@
-A Professional Bank management System with features:
-
-Login System
-Balance Inquiry
-Account Holder Details
-Fund transfer
-Account Closure
-Create account system
-Bank Statement/Transaction History
